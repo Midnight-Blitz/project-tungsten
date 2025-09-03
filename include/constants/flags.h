@@ -43,12 +43,12 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
+#define FLAG_INVERSE    0x20 // Unused Flag
+#define FLAG_SMART_AI    0x21 // Unused Flag
+#define FLAG_NO_CATCH    0x22 // Unused Flag
+#define FLAG_NO_RUN    0x23 // Unused Flag
+#define FLAG_AI_BATTLE    0x24 // Unused Flag
+#define FLAG_DYNAMAX    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
@@ -656,19 +656,19 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
+#define FLAG_DEXNAV_SEARCH  0x264 // Unused Flag
+#define FLAG_DEXNAV_DISPLAY  0x265 // Unused Flag
+#define FLAG_DEXNAV_SPECIES  0x266 // Unused Flag
+#define FLAG_HEAL_AFTER_FOLLOWER_BATTLE  0x267 // Unused Flag
+#define FLAG_PARTNER_WILD_BATTLES  0x268 // Unused Flag
+#define FLAG_REPEL  0x269 // Unused Flag
+#define FLAG_FOLLOWER_TOGGLE  0x26A // Unused Flag
+#define FLAG_NO_ENCOUNTERS  0x26B // Unused Flag
+#define FLAG_BLIND_TRAINERS  0x26C // Unused Flag
+#define FLAG_WTW  0x26D // Unused Flag
+#define FLAG_UNION_CHECK  0x26E // Unused Flag
+#define FLAG_FORCE_SHINY  0x26F // Unused Flag
+#define FLAG_FORCE_NOT_SHINY  0x270 // Unused Flag
 #define FLAG_UNUSED_0x271  0x271 // Unused Flag
 #define FLAG_UNUSED_0x272  0x272 // Unused Flag
 #define FLAG_UNUSED_0x273  0x273 // Unused Flag
