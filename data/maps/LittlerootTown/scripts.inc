@@ -1014,3 +1014,10 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+LittlerootTown_EventScript_HelloWorldSign::
+	msgbox LittlerootTown_Text_HelloWorld, MSGBOX_SIGN
+	end
+
+LittlerootTown_Text_HelloWorld:
+	.string "Hello World\n"
+	.string "“Do you remember?”$"
