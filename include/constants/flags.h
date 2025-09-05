@@ -669,8 +669,8 @@
 #define FLAG_UNION_CHECK  0x26E // Unused Flag
 #define FLAG_FORCE_SHINY  0x26F // Unused Flag
 #define FLAG_FORCE_NOT_SHINY  0x270 // Unused Flag
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
+#define FLAG_DETECTOR_MODE  0x271 // Unused Flag
+#define FLAG_STEP_COUNTER  0x272 // Unused Flag
 #define FLAG_UNUSED_0x273  0x273 // Unused Flag
 #define FLAG_UNUSED_0x274  0x274 // Unused Flag
 #define FLAG_UNUSED_0x275  0x275 // Unused Flag

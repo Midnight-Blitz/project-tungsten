@@ -7,9 +7,9 @@
 // Flag/var defines
 #define DN_FLAG_SEARCHING             FLAG_DEXNAV_SEARCH // Searching for mon
 #define DN_FLAG_DEXNAV_GET            FLAG_DEXNAV_DISPLAY // DexNav shows in start menu
-#define DN_FLAG_DETECTOR_MODE         0 // Allow player to find hidden mons
+#define DN_FLAG_DETECTOR_MODE         FLAG_DETECTOR_MODE // Allow player to find hidden mons
 #define DN_VAR_SPECIES                FLAG_DEXNAV_SPECIES // Registered DexNav species
-#define DN_VAR_STEP_COUNTER           0 // Steps for finding hidden pokemon
+#define DN_VAR_STEP_COUNTER           FLAG_STEP_COUNTER // Steps for finding hidden pokemon
 
 // Search parameters
 #define DEXNAV_TIMEOUT                  15  // 15 seconds is the time out. Max of 1092 seconds allowed
