@@ -1042,13 +1042,8 @@ StarterTown_EventScript_StarterConfirmMudkip::
 	release
 	showmonpic SPECIES_MUDKIP, 10, 3
 	msgbox StarterTown_EventScript_Mudkip, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, StarterTown_EventScript_StarterMudkipConfirm
+	goto_if_eq VAR_RESULT, YES, StarterTown_EventScript_GiveMudkipz
 	goto_if_eq VAR_RESULT, NO, StarterTown_EventScript_StarterChooseAgain
-	end
-
-StarterTown_EventScript_StarterMudkipConfirm::
-	call StarterTown_Text_StarterConfirm
-	call_if_eq gSpecialVar_Result, Mudkip, StarterTown_EventScript_GiveMudkipz
 	end
 
 StarterTown_EventScript_StarterChooseAgain::
@@ -1057,6 +1052,7 @@ StarterTown_EventScript_StarterChooseAgain::
 	goto StarterTown_EventScript_StarterChoice
 
 StarterTown_EventScript_GiveMudkipz::
+	msgbox StarterTown_Text_StarterConfirm
 	givemon SPECIES_MUDKIP, 5
 	playfanfare MUS_OBTAIN_ITEM
 	message StarterTown_Text_MudkipGet
