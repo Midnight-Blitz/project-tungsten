@@ -1025,7 +1025,7 @@ LittlerootTown_Text_HelloWorld:
 StarterTown_EventScript_StarterTest::
 	lock
 	faceplayer
-	call StarterTown_Text_StarterText
+	msgbox StarterTown_Text_StarterText
 	goto StarterTown_EventScript_StarterChoice
 	end
 
@@ -1041,7 +1041,7 @@ StarterTown_EventScript_StarterChoice::
 StarterTown_EventScript_StarterConfirmMudkip::
 	release
 	showmonpic SPECIES_MUDKIP, 10, 3
-	msgbox StarterTown_EventScript_Mudkip, MSGBOX_YESNO
+	msgbox StarterTown_Text_Mudkip, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, StarterTown_EventScript_GiveMudkipz
 	goto_if_eq VAR_RESULT, NO, StarterTown_EventScript_StarterChooseAgain
 	end
