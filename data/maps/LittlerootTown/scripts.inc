@@ -1031,8 +1031,11 @@ StarterTown_EventScript_StarterTest::
 
 StarterTown_EventScript_StarterChoice::
 
-	multichoice 1, 2, MULTI_UNUSED_SSTIDAL_1, FALSE
-	call_if_eq gSpecialVar_Result, Mudkip, StarterTown_EventScript_StarterConfirmMudkip
+	multichoice 3, 0, MULTI_UNUSED_SSTIDAL_1, FALSE
+	switch VAR_RESULT
+	case 0, MauvilleCity_GameCorner_EventScript_TMDoubleTeam
+	case 1, MauvilleCity_GameCorner_EventScript_TMPsychic
+	case 2, StarterTown_EventScript_StarterConfirmMudkip
 	end
 
 StarterTown_EventScript_StarterConfirmMudkip::
