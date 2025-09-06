@@ -1053,7 +1053,7 @@ StarterTown_EventScript_StarterMudkipConfirm::
 
 StarterTown_EventScript_StarterChooseAgain::
 	hidemonpic
-	call StarterTown_Text_Decline
+	msgbox StarterTown_Text_Decline
 	goto StarterTown_EventScript_StarterChoice
 
 StarterTown_EventScript_GiveMudkipz::
