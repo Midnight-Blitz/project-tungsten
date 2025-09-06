@@ -788,7 +788,7 @@ static const struct MenuAction MultichoiceList_Starters[] =
     {COMPOUND_STRING("Golett")},
     {COMPOUND_STRING("Varoom")},
     {COMPOUND_STRING("Mudkip")},
-}
+};
 
 struct MultichoiceListStruct
 {
