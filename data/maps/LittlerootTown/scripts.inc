@@ -1058,7 +1058,7 @@ StarterTown_EventScript_GiveMudkipz::
 	message StarterTown_Text_MudkipGet
 	waitmessage
 	waitfanfare
-	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	msgbox StarterTown_Text_NicknamePrompt, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, StarterTown_EventScript_No_Nick
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
@@ -1072,6 +1072,9 @@ StarterTown_EventScript_GiveMudkipz::
 	msgbox StarterTown_Text_StarterGoodbye, MSGBOX_DEFAULT
 	releaseall
 	end
+
+StarterTown_Text_NicknamePrompt::
+	.string "Do you want to give it a nickname?$"
 
 StarterTown_Text_Mudkip::
 	.string "Oh, you want Mudkip?$"
