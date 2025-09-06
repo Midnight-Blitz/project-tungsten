@@ -1030,7 +1030,8 @@ StarterTown_EventScript_StarterTest::
 	end
 
 StarterTown_EventScript_StarterChoice::
-	scrollingmultichoice 1, 2, 3, 9, FALSE
+
+	multichoice 1, 2, MULTI_UNUSED_SSTIDAL_1, FALSE
 	call_if_eq gSpecialVar_Result, Mudkip, StarterTown_EventScript_StarterConfirmMudkip
 	end
 
@@ -1042,7 +1043,7 @@ StarterTown_EventScript_StarterConfirmMudkip::
 	goto_if_eq VAR_RESULT, NO, StarterTown_EventScript_StarterChooseAgain
 	end
 
-StarterTown_EventScript_StarterConfirmMudkip::
+StarterTown_EventScript_StarterMudkipConfirm::
 	call StarterTown_Text_StarterConfirm
 	call_if_eq gSpecialVar_Result, Mudkip, StarterTown_EventScript_GiveMudkipz
 	end
