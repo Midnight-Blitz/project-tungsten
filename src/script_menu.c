@@ -1148,15 +1148,15 @@ int ScriptMenu_AdjustLeftCoordFromWidth(int left, int width)
 }
 
 // Text displayed as options.
-static const u8 sText_Example1[] = _("Example 1");
-static const u8 sText_Example2[] = _("Example 2");
-static const u8 sText_Example3[] = _("Example 3");
-static const u8 sText_Example4[] = _("Example 4");
-static const u8 sText_Example5[] = _("Example 5");
-static const u8 sText_Example6[] = _("Example 6");
-static const u8 sText_Example7[] = _("Example 7");
-static const u8 sText_Example8[] = _("Example 8");
-static const u8 sText_Example9[] = _("Example 9");
+static const u8 sText_Example1[] = _("Bulbasaur");
+static const u8 sText_Example2[] = _("Charmander");
+static const u8 sText_Example3[] = _("Squirtle");
+static const u8 sText_Example4[] = _("Chikorita");
+static const u8 sText_Example5[] = _("Cyndaquil");
+static const u8 sText_Example6[] = _("Totodile");
+static const u8 sText_Example7[] = _("Treeko");
+static const u8 sText_Example8[] = _("Torchic");
+static const u8 sText_Example9[] = _("Mudkip");
 
 // Sets of multichoices.
 static const struct ListMenuItem sSet1[] =
@@ -1228,9 +1228,9 @@ void ScriptMenu_ScrollingMultichoice(void)
     int maxShowed = gSpecialVar_0x8007;
 
     for (i = 0; i < sScrollingSets[setId].count; i++)
-        width = display_text_and_get_width(sScrollingSets[setId].set[i].name, width);
+        width = DisplayTextAndGetWidth(sScrollingSets[setId].set[i].name, width);
 
-    width = convert_pixel_width_to_tile_width(width);
+    width = ConvertPixelWidthToTileWidth(width);
     left = sub_80E2D5C(left, width);
     windowId = CreateWindowFromRect(left, top, width, maxShowed * 2);
     SetStandardWindowBorderStyle(windowId, 0);
