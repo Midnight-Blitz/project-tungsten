@@ -1031,7 +1031,7 @@ StarterTown_EventScript_StarterTest::
 
 StarterTown_EventScript_StarterChoice::
 
-	multichoice 3, 0, MULTI_UNUSED_SSTIDAL_1, FALSE
+	multichoice 3, 0, MULTI_STARTERS, FALSE
 	switch VAR_RESULT
 	case 0, MauvilleCity_GameCorner_EventScript_TMDoubleTeam
 	case 1, MauvilleCity_GameCorner_EventScript_TMPsychic
