@@ -1021,3 +1021,78 @@ LittlerootTown_EventScript_HelloWorldSign::
 LittlerootTown_Text_HelloWorld:
 	.string "Hello World\n"
 	.string "“Do you remember?”$"
+
+StarterTown_EventScript_StarterTest::
+	lock
+	faceplayer
+	call StarterTown_Text_StarterText
+	goto StarterTown_EventScript_StarterChoice
+	end
+
+StarterTown_EventScript_StarterChoice::
+	scrollingmultichoice 1, 2, 3, 9, FALSE
+	call_if_eq gSpecialVar_Result, Mudkip, StarterTown_EventScript_StarterConfirmMudkip
+	end
+
+StarterTown_EventScript_StarterConfirmMudkip::
+	release
+	showmonpic SPECIES_MUDKIP, 10, 3
+	msgbox StarterTown_EventScript_Mudkip, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, StarterTown_EventScript_StarterMudkipConfirm
+	goto_if_eq VAR_RESULT, NO, StarterTown_EventScript_StarterChooseAgain
+	end
+
+StarterTown_EventScript_StarterConfirmMudkip::
+	call StarterTown_Text_StarterConfirm
+	call_if_eq gSpecialVar_Result, Mudkip, StarterTown_EventScript_GiveMudkipz
+	end
+
+StarterTown_EventScript_StarterChooseAgain::
+	hidemonpic
+	call StarterTown_Text_Decline
+	goto StarterTown_EventScript_StarterChoice
+
+StarterTown_EventScript_GiveMudkipz::
+	givemon SPECIES_MUDKIP, 5
+	playfanfare MUS_OBTAIN_ITEM
+	message StarterTown_Text_MudkipGet
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, StarterTown_EventScript_No_Nick
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	hidemonpic
+	msgbox StarterTown_Text_StarterGoodbye, MSGBOX_DEFAULT
+	releaseall
+	end
+
+	StarterTown_EventScript_No_Nick::
+	hidemonpic
+	msgbox StarterTown_Text_StarterGoodbye, MSGBOX_DEFAULT
+	releaseall
+	end
+
+StarterTown_Text_Mudkip::
+	.string "Oh, you want Mudkip?$"
+
+	StarterTown_Text_MudkipGet::
+	.string "Obtained a Mudkip!$"
+
+StarterTown_Text_StarterConfirm::
+	.string "I bet you'll be best pals!$"
+
+StarterTown_Text_Decline
+	.string "Oh? Take your time!$"
+
+StarterTown_Text_StarterGoodbye::
+	.string "See ya!$"
+
+StarterTown_Text_StarterText::
+	.string "Hi, {PLAYER}!\p"
+	.string "I heard you were trying\n"
+	.string "to make a thing?\p"
+	.string "So! I thought it'd be important\n"
+	.string "to give you a pal for your\l"
+	.string "journey!\p"
+	.string "Go ahead, pick one!$"
