@@ -1082,7 +1082,7 @@ StarterTown_Text_Mudkip::
 StarterTown_Text_StarterConfirm::
 	.string "I bet you'll be best pals!$"
 
-StarterTown_Text_Decline
+StarterTown_Text_Decline::
 	.string "Oh? Take your time!$"
 
 StarterTown_Text_StarterGoodbye::
