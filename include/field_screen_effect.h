@@ -4,25 +4,7 @@
 extern const s32 gMaxFlashLevel;
 
 void WarpFadeInScreen(void);
-void WarpFadeOutScreen(void)
-{
-    u8 currentMapType = GetCurrentMapType();
-    if (!FlagGet(FLAG_REMOVE_WARP_FADE)) // fadescreen if flag not set
-    {
-        switch (GetMapPairFadeToType(currentMapType, GetDestinationWarpMapHeader()->mapType))
-        {
-        case 0:
-            FadeScreen(FADE_TO_BLACK, 0);
-            break;
-        case 1:
-            FadeScreen(FADE_TO_WHITE, 0);
-        }
-    }
-    else
-    {
-        FlagClear(FLAG_REMOVE_WARP_FADE);  // reset flag internally
-    }
-}
+void WarpFadeOutScreen(void);
 void FadeInFromBlack(void);
 void FadeInFromWhite(void);
 void FieldCB_ContinueScriptUnionRoom(void);
