@@ -49,7 +49,7 @@
 #define FLAG_NO_RUN    0x23 // Unused Flag
 #define FLAG_AI_BATTLE    0x24 // Unused Flag
 #define FLAG_DYNAMAX    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_SPAWN_INVISIBLE    0x26 // Spawns the player as an invisible person, good for cutscenes
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
