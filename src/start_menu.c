@@ -49,7 +49,7 @@
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
-#include "decopmpress.h"
+#include "decompress.h"
 
 // Saving Fidget
 #define TAG_THROBBER 0x1000
