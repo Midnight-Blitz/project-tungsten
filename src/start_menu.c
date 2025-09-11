@@ -59,14 +59,14 @@ static const struct OamData sOam_Throbber =
 {
     .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
-    .objModde = ST_OAM_OBJ_NORMAL,
+    .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = FALSE,
     .bpp = ST_OAM_4BPP,
     .shape = SPRITE_SHAPE(32x64),
     .x = 0,
-    .matrixnum = 0,
+    .matrixNum = 0,
     .size = SPRITE_SIZE(32x64),
-    .tilenum = 0,
+    .tileNum = 0,
     .priority = 0,
     .paletteNum = 0,
     .affineParam = 0,
@@ -91,7 +91,7 @@ static const struct CompressedSpriteSheet sSpriteSheet_Throbber[] =
 {
     {
         .data = gThrobber_Gfx,
-        .suze = 0x3200,
+        .size = 0x3200,
         .tag = TAG_THROBBER 
     },
     {}
@@ -114,7 +114,7 @@ static const struct SpriteTemplate sSpriteTemplate_Throbber =
     .anims = sAnims_Throbber,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .calback = SpriteCallbackDummy
+    .callback = SpriteCallbackDummy
 };
 
 void ShowThrobber(void)
