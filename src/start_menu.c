@@ -55,6 +55,8 @@
 #define TAG_THROBBER 0x1000
 static const u16 sThrobber_Pal[] = INCBIN_U16("graphics/text_window/throbber.gbapal");
 const u32 gThrobber_Gfx[] = INCBIN_U32("graphics/text_window/throbber.4bpp.lz");
+static u8 spriteId;
+
 static const struct OamData sOam_Throbber =
 {
     .y = DISPLAY_HEIGHT,
